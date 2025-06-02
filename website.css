@@ -1,4 +1,4 @@
-
+/* General Styling */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #121212;
@@ -8,63 +8,7 @@ body {
     animation: fadeIn 1.2s ease-in-out;
 }
 
-
-h1 {
-    font-size: 32px;
-    color: #BB86FC;
-    text-align: center;
-    animation: fadeSlideIn 1.5s ease-in-out;
-    transition: transform 0.3s, text-shadow 0.3s;
-}
-
-
-h1:hover {
-    transform: scale(1.05);
-    text-shadow: 0px 0px 10px rgba(187, 134, 252, 0.8);
-}
-
-
-h2 {
-    font-size: 24px;
-    color: #BB86FC;
-    text-align: center;
-    animation: bounceIn 1.5s ease-in-out;
-    transition: transform 0.3s, color 0.3s;
-}
-
-
-h2:hover {
-    transform: scale(1.08);
-    color: #E0E0E0;
-}
-
-
-@keyframes fadeSlideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes bounceIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    60% {
-        opacity: 1;
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-
+/* Navigation Bar (Preserved) */
 nav {
     background: #1F1F1F;
     padding: 15px;
@@ -82,7 +26,6 @@ nav ul li {
     margin: 15px;
 }
 
-
 nav ul li a {
     color: #E0E0E0;
     text-decoration: none;
@@ -91,23 +34,73 @@ nav ul li a {
     transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
-
 nav ul li a:hover {
-    color: #BB86FC;
-    text-shadow: 0px 0px 8px rgba(187, 134, 252, 0.6); 
+    color: #0a0a0a;
+    text-shadow: 0px 0px 8px rgba(187, 134, 252, 0.6);
     transform: scale(1.05);
 }
 
-ul li {
-    background: #2E2E2E;
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 6px;
-    transition: transform 0.3s ease-in-out;
+/* Main Section */
+main {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background: #1E1E1E;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeUp 1.5s ease-in-out forwards;
 }
 
-ul li:hover {
-    transform: translateY(-3px) scale(1.03);
+/* Animated h1 */
+h1 {
+    font-size: 36px;
+    color: #BB86FC;
+    animation: fadeSlideIn 1.5s ease-in-out;
+    transition: transform 0.3s, text-shadow 0.3s;
+}
+
+h1:hover {
+    transform: scale(1.05);
+    text-shadow: 0px 0px 12px rgba(187, 134, 252, 0.8);
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+p:hover {
+    color: #BB86FC;
+}
+
+/* Button Animation */
+a {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #E0E0E0;
     background: #BB86FC;
-    color: #121212;
+    border-radius: 6px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+a:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(187, 134, 252, 0.8);
+}
+
+/* Keyframe Animations */
+@keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
